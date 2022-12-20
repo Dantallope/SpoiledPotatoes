@@ -1,0 +1,25 @@
+{
+  "name": "spoiledpotatoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dantallope/SpoiledPotatoes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dantallope/SpoiledPotatoes/issues"
+  },
+  "homepage": "https://github.com/Dantallope/SpoiledPotatoes#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.27.0"
+  }
+}
