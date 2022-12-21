@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500;1,800&display=swap'); 
 
-*{
-    font-family: 'Poppins', sans-serif;
-}
-
 :root {
     --biloba-flower: #aeb5ec;
     --east-bay: #3a4c73;
@@ -15,9 +11,13 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 150%;
 }
 
 body {
-    font-family: 
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-link {
+    font-size: 100%
 }
