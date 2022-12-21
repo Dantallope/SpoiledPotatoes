@@ -77,7 +77,6 @@ form{
     cursor: pointer;
 }
 .field button:hover {
-    
     background-color: #016dcb;
 }
 .facebook-icon
@@ -145,7 +144,7 @@ a.facebook.facebook-icon {
 }
 
 .facebook-icon,
-.img.google-img{
+img.google-img{
     position: absolute;
     top: 50%;
     left: 15px;
@@ -156,4 +155,13 @@ img.google-img {
     height: 20px;
     width: 20px;
     object-fit: cover;
+}
+
+a.google {
+    border: 1px solid #CACACA;
+}
+a.google span {
+    background-color: #fff;
+    opacity: 06;
+    color: #333;
 }
