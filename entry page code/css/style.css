@@ -18,5 +18,12 @@ body{
     font-size: 1.75rem;
     line-height:1.5;
     color: var(--moss-green);
-    background-color: var(--port-gore)
+    background-color: var(--port-gore);
+}
+
+h1 {
+    margin-bottom: 0.625rem;
+    color: var(--moss-green);
+    font-weight: 700;
+    line-height: 1.1;
 }
