@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500;1,800&display=swap'); 
 
+:root {
+    --bilobaFlower: #aeb5ec;
+    --eastBay: #3a4c73;
+    --portGore: #30234f;
+    --offWhite: rgb(237,237,237);
+}
 
 *{
     margin: 0;
@@ -14,8 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /*LAURA CHANGE COLOR HERE*/
-    background-color: #4070f4;
+    background-color: var(--bilobaFlower);
 }
 
 .form{
@@ -23,12 +28,12 @@
     width: 100%;
     padding:30px ;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: var(--offWhite);
 }
 header{
     font-size: 28px;
     font-weight: 600;
-    color: #333;
+    color: var(--eastBay);
     text-align: center;
 }
 
@@ -73,12 +78,12 @@ form{
 }
 .field button {
     color: #fff;
-    background-color: #0171d3;
+    background-color: var(--eastBay);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 .field button:hover {
-    background-color: #016dcb;
+    background-color: var(--portGore);
 }
 .facebook-icon
 
@@ -93,7 +98,7 @@ form{
 } 
 
 .form a {
-    color:#0171d3;
+    color: var(--eastBay);
     text-decoration: none;
 }
 
@@ -115,7 +120,7 @@ form{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: var(--offWhite);
     color: #333;
     padding: 0 15px ;
 }
@@ -162,29 +167,7 @@ a.google {
     border: 1px solid #CACACA;
 }
 a.google span {
-    background-color: #fff;
+    background-color:#4267b2;
     opacity: 06;
-    color: #333;
-=======
-:root {
-    --biloba-flower: #aeb5ec;
-    --east-bay: #3a4c73;
-}
-
-::selection {
-    background-color: var(--biloba-flower);
-    color: var(--east-bay);
-}
-
-html {
-    font-size: 150%;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.form-link {
-    font-size: 100%
-
+    color: #fff;
 }
