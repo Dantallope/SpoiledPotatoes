@@ -19,11 +19,24 @@
 }
 
 .form{
+    position: absolute;
     max-width: 430px;
     width: 100%;
     padding:30px ;
     border-radius: 6px;
     background-color: #fff;
+}
+.form.signup {
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup {
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login {
+    opacity: 0;
+    pointer-events: none;
 }
 header{
     font-size: 28px;
