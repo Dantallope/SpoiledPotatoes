@@ -27,5 +27,8 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.20",
     "sequelize": "^6.27.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2"
   }
 }
