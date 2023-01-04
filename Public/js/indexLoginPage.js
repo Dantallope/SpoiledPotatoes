@@ -35,4 +35,15 @@ forms.addEventListener("submit", (event) => {
     const password = document.getElementById("password").value;
 
     console.log(email + password)
+
+    fetch("/api/user/login",{
+        method: 'POST',
+        headers:{
+            'Content-Type':'application/json',
+        },
+        body: JSON.stringify({
+            email,
+            password,
+        }),
+    })
 })
