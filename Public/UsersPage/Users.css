@@ -1,3 +1,14 @@
+#Back {
+float: left;
+}
+
+#Profile {
+float: right;
+}
+
 #Users {
-overflow:scroll
+height: 69px;
+width: 200px;
+margin: auto;
+overflow: scroll;
 }
