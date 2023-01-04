@@ -10,4 +10,9 @@ pathRouter.get('/login', (req, res) => {
     res.render("login");
 });
 
+pathRouter.get('/home', (req, res) => {
+    res.render("landing");
+});
+
+
 module.exports = pathRouter;

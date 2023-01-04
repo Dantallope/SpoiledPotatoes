@@ -1,31 +1,119 @@
-<form id="login_form">
-    <div>
-        Username: <input type="text" id="username" placeholder="Username Here" />
-    </div>
-    <div>
-        Password: <input type="password" id="password" placeholder="Password Here"/>
-    </div>
-    <button>
-        Login!
-    </button>
-</form>
-<script>
-    document.getElementById("login_form").addEventListener("submit", (event) => {
-        event.preventDefault();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup form</title>
 
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+    <!--css-->
+  <link rel="stylesheet" href="/css/styleLoginPage.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="password" class="password">
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Really can't remember your password?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button>Login</button>
+                    </div>
+
+                   
+                </form>
+                <div class="form-link">
+                        <span>Don't an account? <a href="#" class="link signup-link">Sign up!</a></span>
+                    </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                <i class='bx bxl-facebook facebook-icon' ></i>
+                <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                <img src="../images/google.jpg" alt="" class="google-img">
+                <span>Login with Google</span>
+                </a>
+            </div>
+
+            <!--sign up form-->
+
+        </div>
+        <div class="form signup">
+            <div class="form-content">
+                <header>Sign up</header>
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="password" class="password">
+
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="password" class="password">
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
 
 
-        fetch("/api/user/login", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                username,
-                password,
-            }),
-        })
-    })
-</script>
+                    <div class="field button-field">
+                        <button>Sign up</button>
+                    </div>
+
+                   
+                </form>
+                <div class="form-link">
+                        <span>Already have an account? <a href="#" class="link Login-link">Login</a></span>
+                    </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                <i class='bx bxl-facebook facebook-icon' ></i>
+                <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                <img src="../images/google.jpg" alt="" class="google-img">
+                <span>Login with Google</span>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!--Javascript-->
+    <script src="/js/indexLoginPage.js"></script>
+
+
+
+</body>
+</html>
