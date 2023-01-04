@@ -1,3 +1,5 @@
+
+
 const forms = document.querySelector(".forms"),
     showPassword = document.querySelectorAll(".eye-icon"),
     links = document.querySelectorAll(".link");
@@ -25,4 +27,12 @@ links.forEach(link => {
         forms.classList.toggle("show-signup");
     
     })
+})
+forms.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    console.log(email + password)
 })
