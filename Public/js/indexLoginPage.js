@@ -34,8 +34,7 @@ forms.addEventListener("submit", (event) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    console.log(email + password)
-
+    document.getElementById("err").textContent='';
     fetch("/api/user/login",{
         method: 'POST',
         headers:{
@@ -45,5 +44,12 @@ forms.addEventListener("submit", (event) => {
             email,
             password,
         }),
+    }).then((result) => {
+        if (!result.ok) {
+            document.getElementById("err").textContent = "Unable to login";
+            return null;
+        } else {
+            return result.json();
+        }
     })
 })
