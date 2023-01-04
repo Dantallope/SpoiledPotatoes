@@ -1,7 +1,9 @@
+require("dotenv").config();
 const path = require('path')
 const express = require('express');
 const exphbs = require('express-handlebars');
 
+const sequelize = require('./config/connection')
 const mainRouter = require("./controllers")
 
 const app = express();
@@ -18,5 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(mainRouter);
 
-  app.listen(PORT, () => console.log('Now listening'));
+sequelize.sync().then(() =>{
+  app.listen(PORT, () => { console.log('Now listening')
+});
+});
 
