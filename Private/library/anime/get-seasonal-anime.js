@@ -14,13 +14,13 @@ export const seasonal_anime = (config) => {
         {
           method: "GET",
           headers: {
-            "X-MAL-CLIENT-ID": config.client_id,
+            "X-SP-CLIENT-ID": config.client_id,
           },
         }
       )
         .then((res) => {
           if (res.status !== 200) {
-            throw new Error(`MAL error occurred. ${res.status}: ${res.text()}`);
+            throw new Error(`SP error occurred. ${res.status}: ${res.text()}`);
           }
           return res.json();
         })

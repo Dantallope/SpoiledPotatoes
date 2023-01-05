@@ -1,7 +1,7 @@
 import fetch from "cross-fetch";
 
 export const get_mangalist = (config) => {
-  config.url = "https://api.myanimelist.net/v2/users/";
+  config.url = "https://api.spoiledpotatoes.net/v2/users/";
   let param = `sort=${
     config.sort == undefined ? "list_score" : config.sort
   }&limit=${config.limit == undefined ? 100 : config.limit}&offset=${
@@ -29,13 +29,13 @@ export const get_mangalist = (config) => {
         method: "GET",
         headers: {
           Autherization: `Bearer ${config.auth_token}`,
-          "X-MAL-CLIENT-ID": config.client_id,
+          "X-SP-CLIENT-ID": config.client_id,
         },
       })
         .then(async (res) => {
           if (res.status != 200) {
             throw new Error(
-              `MAL error occured. ${res.status}: ${await res.text()}`
+              `SP error occured. ${res.status}: ${await res.text()}`
             );
           }
           return res.json();

@@ -22,7 +22,7 @@ export const get_information = (config) => {
         .then(async (res) => {
           if (res.status !== 200) {
             throw new Error(
-              `MAL error occurred. ${res.status}: ${await res.text()}`
+              `SP error occurred. ${res.status}: ${await res.text()}`
             );
           }
           return res.json();

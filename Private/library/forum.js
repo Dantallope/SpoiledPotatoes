@@ -3,12 +3,12 @@ import { forum_topic_detail } from "./forum/get-forum-topic-detail.js";
 import { forum_topics } from "./forum/get-forum-topics.js";
 
 const API = {
-  url: "https://api.spoiledpotato.net/v2/forum/",
+  url: "https://api.spoiledpotatoes.net/v2/forum/",
 };
 
 export const forum = (config = {}) => {
   if (config.client_id == undefined) {
-    throw new ReferenceError("Missing MAL require: client_id");
+    throw new ReferenceError("Missing SP require: client_id");
   }
   config.url = API.url;
   return {
