@@ -11,14 +11,14 @@ export const anime_list = (config) => {
         {
           method: "GET",
           headers: {
-            "X-MAL-CLIENT-ID": config.client_id,
+            "X-SP-CLIENT-ID": config.client_id,
           },
         }
       )
         .then(async (res) => {
           if (res.status !== 200) {
             throw new Error(
-              `MAL error occurred. ${res.status}: ${await res.text()}`
+              `SP error occurred. ${res.status}: ${await res.text()}`
             );
           }
           return res.json();

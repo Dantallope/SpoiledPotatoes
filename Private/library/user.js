@@ -1,7 +1,7 @@
 import { get_information } from "./user/get-my-user-information.js";
 
 const API = {
-  url: "https://api.spoiledpotato.net/v2/users/",
+  url: "https://api.spoiledpotatoes.net/v2/users/",
 };
 
 export const user = (config = {}) => {

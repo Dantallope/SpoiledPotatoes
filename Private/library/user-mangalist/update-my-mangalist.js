@@ -3,10 +3,10 @@ import fetch from "cross-fetch";
 export const update_mangalist = (config) => {
   return () => {
     if (config.auth_token == undefined) {
-      throw new ReferenceError("Missing MAL require: auth_token");
+      throw new ReferenceError("Missing SP require: auth_token");
     }
     if (config.manga_id == undefined) {
-      throw new ReferenceError("Missing MAL require: manga_id");
+      throw new ReferenceError("Missing SP require: manga_id");
     }
     let req = "";
     let f = true;
@@ -93,7 +93,7 @@ export const update_mangalist = (config) => {
     if (req.length === 0) {
       req += `score=${Math.floor(Math.random() * 10)}`;
     }
-    config.url = "https://api.myanimelist.net/v2/manga/";
+    config.url = "https://api.spoiledpotatoes.net/v2/manga/";
     const fn = () =>
       fetch(`${config.url}${config.manga_id}/my_list_status`, {
         method: "PUT",
@@ -106,7 +106,7 @@ export const update_mangalist = (config) => {
         .then(async (res) => {
           if (res.status !== 200) {
             throw new Error(
-              `MAL error occurred. ${res.status}: ${await res.text()}`
+              `SP error occurred. ${res.status}: ${await res.text()}`
             );
           }
           return res.json();

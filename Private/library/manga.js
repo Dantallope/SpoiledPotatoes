@@ -3,12 +3,12 @@ import { manga_details } from "./manga/get-manga-details.js";
 import { manga_ranking } from "./manga/get-manga-ranking.js";
 
 const API = {
-  url: "https://api.spoiledpotato.net/v2/manga",
+  url: "https://api.spoiledpotatoes.net/v2/manga",
 };
 
 export const manga = (config = {}) => {
   if (config.client_id == undefined) {
-    throw new ReferenceError("Missing MAL require: client_id");
+    throw new ReferenceError("Missing SP require: client_id");
   }
   config.url = API.url;
   return {

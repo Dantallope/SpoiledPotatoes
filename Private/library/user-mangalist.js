@@ -3,7 +3,7 @@ import { update_mangalist } from "./user-mangalist/update-my-mangalist.js";
 import { delete_manga_item } from "./user-mangalist/delete-my-mangalist-item.js";
 
 const API = {
-  url: "https://api.spoiledpotato.net/v2/manga/",
+  url: "https://api.spoiledpotatoes.net/v2/manga/",
 };
 
 export const user_mangalist = (config = {}) => {

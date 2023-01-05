@@ -5,13 +5,13 @@ import { seasonal_anime } from "./anime/get-seasonal-anime.js";
 import { suggested_anime } from "./anime/get-suggested-anime.js.js";
 
 const API = {
-  url: "https://api.spoiledpotato.net/v2/anime",
+  url: "https://api.spoiledpotatoes.net/v2/anime",
 };
 
 export const anime = (config = {}) => {
   config.url = API.url;
   if (config.client_id == undefined) {
-    throw new ReferenceError("Missing MAL require: client_id");
+    throw new ReferenceError("Missing SP require: client_id");
   }
   if (config.limit == undefined) {
     config.limit = 100;

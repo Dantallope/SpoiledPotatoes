@@ -3,7 +3,7 @@ import { delete_anime_item } from "./user_animelist/delete-my-animelist-item.js.
 import { get_animelist } from "./user_animelist/get-user-animelist.js.js";
 
 const A = {
-  url: "https://api.spoiledpotato.net/v2/anime/",
+  url: "https://api.spoiledpotatoes.net/v2/anime/",
 };
 
 export const user_animelist = (config = {}) => {
