@@ -4,41 +4,44 @@ const forms = document.querySelector(".forms"),
     showPassword = document.querySelectorAll(".eye-icon"),
     links = document.querySelectorAll(".link");
 
+const loginForm = document.getElementById('loginF')
+const signUpForm = document.getElementById('signUpF')
+
 showPassword.forEach(eyeIcon => {
-    eyeIcon.addEventListener("click", ()=> {
+    eyeIcon.addEventListener("click", () => {
         let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
 
-        pwFields.forEach(password =>{
+        pwFields.forEach(password => {
 
-            if( password.type === "password" ){
+            if (password.type === "password") {
                 password.type = "text";
                 eyeIcon.classList.replace("bx-hide", "bx-show");
                 return;
             }
             password.type = "password";
-                eyeIcon.classList.replace("bx-show", "bx-hide");
+            eyeIcon.classList.replace("bx-show", "bx-hide");
         })
     })
 })
 
 links.forEach(link => {
-    link.addEventListener ("click", e => {
+    link.addEventListener("click", e => {
         e.preventDefault(); //preventing the form from submitting
         forms.classList.toggle("show-signup");
-    
+
     })
 })
-forms.addEventListener("submit", (event) => {
+loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    document.getElementById("err").textContent='';
-    fetch("/api/user/login",{
+    document.getElementById("err").textContent = '';
+    fetch("/api/user/login", {
         method: 'POST',
-        headers:{
-            'Content-Type':'application/json',
+        headers: {
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({
             email,
@@ -52,4 +55,35 @@ forms.addEventListener("submit", (event) => {
             return result.json();
         }
     })
+})
+
+signUpForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById("emailSU").value;
+    const password = document.getElementById("passwordSU").value;
+    const newPasswordC = document.getElementById("passwordSU2").value;
+
+    if (password != newPasswordC){
+        console.log('oof');
+    }else{
+        document.getElementById("signUpErr").textContent = '';
+        fetch("/api/user", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email,
+                password,
+            }),
+        }).then((result) => {
+            if (!result.ok) {
+                document.getElementById("signUpErr").textContent = "Unable to create user";
+                return null;
+            } else {
+                return result.json();
+            }
+        })
+    }
 })
