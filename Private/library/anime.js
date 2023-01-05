@@ -2,7 +2,7 @@ import { anime_details } from "./anime/get-anime-details.js";
 import { anime_list } from "./anime/get-anime-list.js";
 import { anime_ranking } from "./anime/get-anime-ranking.js";
 import { seasonal_anime } from "./anime/get-seasonal-anime.js";
-import { suggested_anime } from "./anime/get-suggested-anime.js";
+import { suggested_anime } from "./anime/get-suggested-anime.js.js";
 
 const API = {
   url: "https://api.spoiledpotato.net/v2/anime",
