@@ -26,11 +26,13 @@ showPassword.forEach(eyeIcon => {
 
 links.forEach(link => {
     link.addEventListener("click", e => {
-        e.preventDefault(); //preventing the form from submitting
+        e.preventDefault();
         forms.classList.toggle("show-signup");
 
     })
 })
+
+/* Login In */
 loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -86,4 +88,4 @@ signUpForm.addEventListener("submit", (event) => {
             }
         })
     }
-})
+});
