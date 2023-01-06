@@ -14,10 +14,10 @@ usersRouter.post("/login", async (req, res) => {
         res.status(401).end('User not found');
         return;
     }
-   // if (user.password !== password) {
-      //  res.status(401).end('Stinky Password');
-      //  return;
-    //}
+    if (user.password !== password) {
+        res.status(401).end('Stinky Password');
+        return;
+    }
 
     const token = jwt.sign({id: user.id}, process.env.JWT_KEY);
 

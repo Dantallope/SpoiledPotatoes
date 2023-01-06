@@ -33,28 +33,26 @@ links.forEach(link => {
 })
 
 /* Login In */
-loginForm.addEventListener("submit", (event) => {
+loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
     document.getElementById("err").textContent = '';
-    fetch("/api/user/login", {
+    await fetch("/api/user/login", {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            email,
-            password,
-        }),
+        body: JSON.stringify({ email, password, }),
+        headers: { 'Content-Type': 'application/json'},
+        
     }).then((result) => {
-        if (!result.ok) {
+        if (result.ok) {
+            console.log('ok')
+            return result.json();
+        } else {
             document.getElementById("err").textContent = "Unable to login";
             return null;
-        } else {
-            return result.json();
+            
         }
     });
 });
