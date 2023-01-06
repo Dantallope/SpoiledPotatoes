@@ -14,4 +14,7 @@ pathRouter.get('/users', (req, res) => {
     res.render("users");
 });
 
+pathRouter.get('/infopage', (req, res) => {
+    res.render("infopage");
+});
 module.exports = pathRouter;
