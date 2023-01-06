@@ -47,8 +47,7 @@ loginForm.addEventListener("submit", async (event) => {
         
     }).then((result) => {
         if (result.ok) {
-            console.log('ok')
-            return result.json();
+           window.location.replace('/')
         } else {
             document.getElementById("err").textContent = "Unable to login";
             return null;

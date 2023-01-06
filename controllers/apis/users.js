@@ -5,11 +5,13 @@ const User = require('../../models/User');
 const usersRouter = new Router();
 
 usersRouter.post("/login", async (req, res) => {
-    const {email, password} = req.body;
+    const { email, password } = req.body;
 
-    const user = await User.findOne({where:{
-        email,
-    }});
+    const user = await User.findOne({
+        where: {
+            email,
+        }
+    });
     if (!user) {
         res.status(401).end('User not found');
         return;
@@ -19,19 +21,21 @@ usersRouter.post("/login", async (req, res) => {
         return;
     }
 
-    const token = jwt.sign({id: user.id}, process.env.JWT_KEY);
+    const token = jwt.sign({ id: user.id }, process.env.JWT_KEY);
 
-res.cookie('logintoken',token, {httpOnly:true });
+    res.cookie('logintoken', token, { httpOnly: true });
 
     res.end();
 });
 
-usersRouter.post('/', async (req,res) => {
-    const {email, password} = req.body;
+usersRouter.post('/', async (req, res) => {
+    const { email, password } = req.body;
 
-    const user = await User.findOne({  where: {
-        email,
-    }});
+    const user = await User.findOne({
+        where: {
+            email,
+        }
+    });
 
     if (user) {
         res.status(409).end("Email already in use");
