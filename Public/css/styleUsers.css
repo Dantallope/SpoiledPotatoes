@@ -6,9 +6,147 @@ float: left;
 float: right;
 }
 
-#Users {
-height: 69px;
-width: 200px;
-margin: auto;
-overflow: scroll;
-}
+  
+  .container {
+    display: grid;
+  }
+  
+  .scroll-snap-panel {
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--container-width);
+  }
+  
+  /* the scroll magic */
+  
+  .scroll-container {
+    position: relative;
+    width: 650px;
+    height: auto;
+    top: 20px;
+    grid-template-columns: repeat(2, var(--container-width));
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    min-height: 200px;
+    max-height: 100vh;
+    border: 1px solid rgba(204, 204, 204, 0);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+  }
+  
+  .scroll-list {
+    display: block;
+    width: 55%;
+    height: fit-content;
+    min-height: 100px;
+    max-height: 60vh;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: auto;
+    list-style: none;
+    scroll-snap-align: start;
+    scroll-snap-type: y proximity;
+  }
+  
+  .scroll-list > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .scroll-list li {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #aaa;
+    scroll-snap-align: start;
+    color: rgb(47, 0, 255);
+    background-color: rebeccapurple
+  }
+  
+  /* styling of the inside of the list */
+  
+  .scroll-list > li:last-child {
+    border: 0;
+  }
+  
+  .scroll-list-image {
+    border-radius: 50%;
+  }
+  
+  .people {
+    background: var(--people-bg);
+    color: var(--people-color);
+  }
+  
+ /* .groups {
+    background: var(--groups-bg);
+    color: var(--groups-color);
+  }*/
+  
+  /* some styling of the tabs */
+  
+  .tabs-container {
+    margin-top: 20px;
+    margin: auto;
+    padding-top: 150px;
+  }
+  
+  .tab {
+    display: block;
+    margin: 0;
+    padding: 16px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(250, 9, 9);
+    border: 1px solid rgb(0, 217, 255);
+  }
+  
+  .tab:first-child {
+    border-top-left-radius: 5px;
+    border: 1px solid rgb(0, 26, 255);
+    background-color: black;
+  }
+  
+  .tab:last-child {
+    border-top-right-radius: 5px;
+  }
+  
+  /*.tab.active {
+    border-bottom-color: transparent;
+  }*/
+  
+  /* some basic styling (added to the bottom for convenience) */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #FEFEFE;
+    background: var(--main-bg);
+  }
+  
+  img {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  h2 {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  
