@@ -1,4 +1,5 @@
-const showsAPI = 
-const showStringEl = document.getElementById('showsStringEl')
+const signupBttn = document.getElementById('signupBttn')
 
-JSON.stringify(showsAPI) 
+signupBttn.onclick = function() {
+    window.location = 'http://localhost:3001/login'
+}
