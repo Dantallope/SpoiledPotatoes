@@ -40,20 +40,19 @@ body {
     background-color: #4070f4;
 }
 
-.logo{
-    align-items: center;
-    /* background-color: aqua; */
+#potatoLogo{
+    width: 90%;
+    height: 40%;
 }
 
 .webTitle{
-    font-size: xx-large;
-    justify-content: center;
+    font-size: 100px;
     padding: 10px;
-    margin-left: 150px;
+    margin-left: 50px;
+    margin-top: 150px;
 }
 
 .form .field{
-
     width: 100%;
     background-color: black;
 }
@@ -91,9 +90,9 @@ body {
     padding-right: 50px;
 }
 .randomContainer {
-    transform: translateY(-250%);
+    transform: translateY(-3550%);
     display: inline-block;
-    padding: 20px 100px 20px 100px;
+    /* padding: 20px 100px 20px 100px; */
     /* background-color: bisque; */
 }
 
