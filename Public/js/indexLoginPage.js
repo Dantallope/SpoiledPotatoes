@@ -54,8 +54,8 @@ loginForm.addEventListener("submit", (event) => {
         } else {
             return result.json();
         }
-    })
-})
+    });
+});
 
 signUpForm.addEventListener("submit", (event) => {
     event.preventDefault();
