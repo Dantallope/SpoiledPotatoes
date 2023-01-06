@@ -1,6 +1,7 @@
 <head>
-     <link rel="stylesheet" href="/css/styleUsers.css">
+    <link rel="stylesheet" href="/css/styleUsers.css">
 </head>
+
 <body>
     <div>
         <button id="Back">Back</button>
@@ -8,9 +9,22 @@
     <div>
         <button id="Profile">Profile</button>
     </div>
-    <div id="Users">
-        <div>User</div>
-        <div>User</div>
-        <div>User</div>
-    </div>
+    <section class="scroll-snap-panel" role="tablist" aria-label="users and groups">
+        <div class="tabs-container container">
+            <div data-target="people-tab" role="tab" aria-selected="true" class="people tab active"
+                aria-controls="people-tab">Other Users That Liked This Show</div>
+        </div>
+        <div class="scroll-container container">
+            <div class="scroll-list people" role="tabpanel" tabindex="0" id="people-tab" aria-label="people">
+                <ul>
+                    <li>
+                        <img src="/Public/images/google.jpg" class="scroll-list-image" alt="" />
+                        <div>
+                            <h2>Example User</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>

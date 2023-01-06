@@ -16,6 +16,11 @@ usersRouter.post("/login", async(req,res) => {
         return;
     }
 
+    if (user.password !== password) {
+        res.status(401).end('Stinky Password');
+        return;
+    }
+
     res.end();
 });
 

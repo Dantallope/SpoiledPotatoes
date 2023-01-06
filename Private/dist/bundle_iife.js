@@ -1,11 +1,11 @@
-define(['cross-fetch'], (function (fetch) { 'use strict';
+(function (fetch) {
+  'use strict';
 
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var fetch__default = /*#__PURE__*/_interopDefaultLegacy(fetch);
+  var fetch__default = /*#__PURE__*/_interopDefaultLegacy(fetch);
 
-//the code below prevents the search bar or url bar from being undefined aka gives u an error whe nan id does not exsist
-const anime_details = (config) => {
+  const anime_details = (config) => {
     return () => {
       if (config.anime_id == undefined) {
         throw new ReferenceError("anime_id perameter is needed.");
@@ -167,16 +167,17 @@ const anime_details = (config) => {
     }
     if (config.sort == undefined) {
       config.sort = "anime_score";
-    } return {
-        anime_list: anime_list(config),
-        anime_details: anime_details(config),
-        anime_ranking: anime_ranking(config),
-        seasonal_anime: seasonal_anime(config),
-        suggested_anime: suggested_anime(config),
+    }
+    return {
+      anime_list: anime_list(config),
+      anime_details: anime_details(config),
+      anime_ranking: anime_ranking(config),
+      seasonal_anime: seasonal_anime(config),
+      suggested_anime: suggested_anime(config),
     };
-};
+  };
 
-const update_animelist = (config) => {
+  const update_animelist = (config) => {
     let req = "";
     let f = true;
     if (config.status != undefined) {
@@ -262,182 +263,168 @@ const update_animelist = (config) => {
         throw new ReferenceError("anime_id parameter is required.");
       }
       config.url = "https://api.spoiledpotatoes.net/v2/anime/";
-            //console.log(config); 
-
-            const fn = () =>
-            fetch__default["default"](`${config.url}${config.anime_id}/my_list_status`, {
-              method: "PUT",
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                Authorization: `Bearer ${config.auth_token}`,
-              },
-              body: `${req}`,
-            })
-            .then(async (res) => {
-                if (res.status != 200) {
-                  throw new Error(
-                    `SP error occured. ${res.status}: ${await res.text()}`
-                  );
-                }
-                return res.json();
-              })
-              .then((data) => data);
-    
-          return fn;
-        };
-      };
-
-      const get_animelist = (config) => {
-        config.url = "https://api.spoiledpotatoes.net/v2/users/";
-        let param = `sort=${
-        config.sort == undefined ? "list_score" : config.sort
-      }&limit=${config.limit == undefined ? 100 : config.limit}&offset=${
-        config.offset == undefined ? 0 : config.offset
-      }`;
-      return () => {
-        if (config.user_name == undefined) {
-          throw new ReferenceError("user_name parameter is required.");
-        }
-        if (config.user_name == "@me") {
-          if (config.auth_token == undefined) {
-            throw new Error("auth_token parameter is required for @me.");
-          }
-        } else {
-          if (config.client_id == undefined && config.auth_token == undefined) {
-            throw new Error("client_id parameter is reuqired.");
-          }
-        }
-        if (config.status != undefined) {
-          param += `&status=${config.status}`;
-        }
-  
-        const fn = () =>
-          fetch__default["default"](`${config.url}${config.user_name}/animelist?${param}`, {
-            method: "GET",
-            headers: {
-              Autherization: `Bearer ${config.auth_token}`,
-              "X-SP-CLIENT-ID": config.client_id,
-            },
-          })
-            .then(async (res) => {
-              if (res.status != 200) {
-                throw new Error(
-                  `SP error occured. ${res.status}: ${await res.text()}`
-                );
-              }
-              return res.json();
-            })
-            .then((data) => data);
-  
-        return fn;
-      };
-    };
-
-    Const get_animelist = (config) => {
-        config.url = "https://api.spoiledpotatoes.net/v2/users/";
-        let param = `sort=${
-        config.sort == undefined ? "list_score" : config.sort
-      }&limit=${config.limit == undefined ? 100 : config.limit}&offset=${
-        config.offset == undefined ? 0 : config.offset
-      }`;
-      return () => {
-        if (config.user_name == undefined) {
-          throw new ReferenceError("user_name parameter is required.");
-        }
-        if (config.user_name == "@me") {
-          if (config.auth_token == undefined) {
-            throw new Error("auth_token parameter is required for @me.");
-          }
-        } else {
-          if (config.client_id == undefined && config.auth_token == undefined) {
-            throw new Error("client_id parameter is reuqired.");
-          }
-        }
-        if (config.status != undefined) {
-          param += `&status=${config.status}`;
-        }
-  
-        const fn = () =>
-          fetch__default["default"](`${config.url}${config.user_name}/animelist?${param}`, {
-            method: "GET",
-            headers: {
-              Autherization: `Bearer ${config.auth_token}`,
-              "X-SP-CLIENT-ID": config.client_id,
-            },
-          })
-            .then(async (res) => {
-              if (res.status != 200) {
-                throw new Error(
-                  `SP error occured. ${res.status}: ${await res.text()}`
-                );
-              }
-              return res.json();
-            })
-            .then((data) => data);
-  
-        return fn;
-      };
-    };
-
-    const A = {
-      url: "https://api.spoiledpotatoes.net/v2/anime/",
-    };
-  
-    const user_animelist = (config = {}) => {
-      config.url = A.url;
-      return {
-        update_animelist: update_animelist(config),
-        delete_anime_item: delete_anime_item(config),
-        get_animelist: get_animelist(config),
-      };
-    };
-    const forum_boards = (config) => {
-      return () => {
-        const fn = () =>
-          fetch__default["default"](`${config.url}boards`, {
-            method: "GET",
-            headers: {
-              "X-SP-CLIENT-ID": config.client_id,
-            },
-          })
-            .then(async (res) => {
-              if (res.status !== 200) {
-                throw new Error(
-                  `SP error occurred. ${res.status}: ${await res.text()}`
-                );
-              }
-              return res.json();
-            })
-            .then((data) => data);
-  
-        return fn;
-      };
-    };
-    const forum_topic_detail = (config) => {
-      return () => {
-        if (config.topic_id == undefined) {
-          throw new Error("topic_id paremeter is required.");
-        }
-        if (config.limit == undefined) {
-          config.limit = 100;
-        } else {
-          if (config.limit > 100) {
-            throw new Error("limit has to be less then 100");
-          }
-        }
-        if (config.offset == undefined) {
-          config.offset = 0;
-        }
-        const fn = () =>
-          fetch__default["default"](
-            `${config.url}topic/${config.topic_id}?limit=${config.limit}&offset=${config.offset}`,
-            {
-              method: "GET",
-              headers: {
-                "X-SP-CLIENT-ID": config.client_id,
-              },
+      //console.log(config);
+      const fn = () =>
+        fetch__default["default"](`${config.url}${config.anime_id}/my_list_status`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization: `Bearer ${config.auth_token}`,
+          },
+          body: `${req}`,
+        })
+          .then(async (res) => {
+            if (res.status != 200) {
+              throw new Error(
+                `SP error occured. ${res.status}: ${await res.text()}`
+              );
             }
-          )
+            return res.json();
+          })
+          .then((data) => data);
+
+      return fn;
+    };
+  };
+
+  const delete_anime_item = (config) => {
+    return () => {
+      if (config.auth_token == undefined) {
+        throw new ReferenceError("Missing SP require: auth_token");
+      }
+      if (config.anime_id == undefined) {
+        throw new ReferenceError("anime_id parameter is required.");
+      }
+      config.url = "https://api.spoiledpotatoes.net/v2/anime/";
+      const fn = () =>
+        fetch__default["default"](`${config.url}${config.anime_id}/my_list_status`, {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${config.auth_token}`,
+          },
+        })
+          .then(async (res) => {
+            //console.log(res);
+            if (res.status != 200) {
+              throw new Error(
+                `SP error occured. ${res.status}: ${await res.text()}`
+              );
+            }
+            return res.json();
+          })
+          .then((data) => data);
+
+      return fn;
+    };
+  };
+
+  const get_animelist = (config) => {
+    config.url = "https://api.spoiledpotatoes.net/v2/users/";
+    let param = `sort=${
+    config.sort == undefined ? "list_score" : config.sort
+  }&limit=${config.limit == undefined ? 100 : config.limit}&offset=${
+    config.offset == undefined ? 0 : config.offset
+  }`;
+    return () => {
+      if (config.user_name == undefined) {
+        throw new ReferenceError("user_name parameter is required.");
+      }
+      if (config.user_name == "@me") {
+        if (config.auth_token == undefined) {
+          throw new Error("auth_token parameter is required for @me.");
+        }
+      } else {
+        if (config.client_id == undefined && config.auth_token == undefined) {
+          throw new Error("client_id parameter is reuqired.");
+        }
+      }
+      if (config.status != undefined) {
+        param += `&status=${config.status}`;
+      }
+
+      const fn = () =>
+        fetch__default["default"](`${config.url}${config.user_name}/animelist?${param}`, {
+          method: "GET",
+          headers: {
+            Autherization: `Bearer ${config.auth_token}`,
+            "X-SP-CLIENT-ID": config.client_id,
+          },
+        })
+          .then(async (res) => {
+            if (res.status != 200) {
+              throw new Error(
+                `SP error occured. ${res.status}: ${await res.text()}`
+              );
+            }
+            return res.json();
+          })
+          .then((data) => data);
+
+      return fn;
+    };
+  };
+
+  const A = {
+    url: "https://api.spoiledpotatoes.net/v2/anime/",
+  };
+
+  const user_animelist = (config = {}) => {
+    config.url = A.url;
+    return {
+      update_animelist: update_animelist(config),
+      delete_anime_item: delete_anime_item(config),
+      get_animelist: get_animelist(config),
+    };
+  };
+
+  const forum_boards = (config) => {
+    return () => {
+      const fn = () =>
+        fetch__default["default"](`${config.url}boards`, {
+          method: "GET",
+          headers: {
+            "X-SP-CLIENT-ID": config.client_id,
+          },
+        })
+          .then(async (res) => {
+            if (res.status !== 200) {
+              throw new Error(
+                `SP error occurred. ${res.status}: ${await res.text()}`
+              );
+            }
+            return res.json();
+          })
+          .then((data) => data);
+
+      return fn;
+    };
+  };
+
+  const forum_topic_detail = (config) => {
+    return () => {
+      if (config.topic_id == undefined) {
+        throw new Error("topic_id paremeter is required.");
+      }
+      if (config.limit == undefined) {
+        config.limit = 100;
+      } else {
+        if (config.limit > 100) {
+          throw new Error("limit has to be less then 100");
+        }
+      }
+      if (config.offset == undefined) {
+        config.offset = 0;
+      }
+      const fn = () =>
+        fetch__default["default"](
+          `${config.url}topic/${config.topic_id}?limit=${config.limit}&offset=${config.offset}`,
+          {
+            method: "GET",
+            headers: {
+              "X-SP-CLIENT-ID": config.client_id,
+            },
+          }
+        )
           .then(async (res) => {
             if (res.status !== 200) {
               throw new Error(
@@ -917,7 +904,7 @@ const update_animelist = (config) => {
   };
 
   const API = {
-    url: "https://api.myanimelspoiledpotatoesist.net/v2/users/",
+    url: "https://api.spoiledpotatoes.net/v2/users/",
   };
 
   const user = (config = {}) => {
@@ -943,4 +930,4 @@ const update_animelist = (config) => {
 
   return index;
 
-}));
+})(fetch);
