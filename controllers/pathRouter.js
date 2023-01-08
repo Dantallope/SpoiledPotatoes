@@ -3,10 +3,10 @@ const jwt = require('jsonwebtoken');
 const pathRouter = new Router();
 
 pathRouter.get('/', (req, res) => {
-    const { logintoken } = req.cookies;
+    const { logintoken } = req.cookie;
 
     try{
-    const data = jwt.verify(logintoken, process.env,JWT_KEY);
+   const data = jwt.verify(logintoken, process.env.JWT_KEY);
     console.log(data);
     res.render("landing");
     }catch (error){
