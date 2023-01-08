@@ -2,6 +2,7 @@
 :root {
     --biloba-flower: #aeb5ec;
     --east-bay: #3a4c73;
+    --lighter-purple: #f2e7fe;
 }
 
 ::selection {
@@ -15,10 +16,11 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+    color: var(--east-bay);
 }
 
 .form-link {
-    font-size: 100%
+    font-size: 50px;
 
 } 
 
@@ -31,73 +33,77 @@ body {
 
 .container{
     height: 100vh;
-    /* width: 100vh; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    /*COLOR CHANGE*/ 
-    background-color: #4070f4;
+    justify-content: center; 
+    background-color: var(--biloba-flower);
+}
+
+.webTitle {
+    font-size: 100px;
+    padding: 0px 0px 50px 0px;
+    margin-left: 40px;
+    margin-top: -250px;
+}
+
+h2 {
+    margin: -50px 0px 0px 40px;
+    border-bottom: 2px solid var(--east-bay);
 }
 
 #potatoLogo{
-    width: 80%;
-    height: 50%;
-    margin-left: 150px;
+    padding: 50px;
+    width: 90%;
+    height: 40%;
+    margin-top: 50px;
+    margin-left: 30px;
 }
 
-.webTitle{
-    font-size: 100px;
-    padding: 10px;
-    margin-left: 550px;
-    margin-top: 150px;
+.form {
+    display: block;
 }
 
-.form .field{
-    width: 100%;
-    background-color: black;
-}
-
-.form input,
-.form button{
-    transform: translateY(-500%);
-    margin-left: 350px;
-    margin-right: 500px;
-    max-width: 500px;
-    height: 100%;
-    width: 80%;
-    border: none;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 6px;
-}
 
 .form input{
+    transform: translateY(400px);
+    font-size: 25px;
     outline: none;
-    padding: 0 15px;
-    border: 1px solid #CACACA;
+    padding: 0px 15px;
+    margin-left: -700px;
+    border-radius: 25px;
+    border: 2px solid #CACACA;
+    color: var(--east-bay);
+    cursor: pointer;
+} 
+
+#searchBar {
+    padding-left: 50px; 
+    padding-right: 50px; 
+} 
+
+#searchBar:focus {
+    border-color: var(--east-bay);
 }
 
-.form input:focus {
+
+input:focus {
     border-bottom-width: 2px;
 }
 
-.form button:hover {
-    border: red;
+
+#loginBttn {
+    color: var(--east-bay);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 25px;
+    border-radius: 6px;
+    width: 80%;
+    transform: translateY(450px);
+    margin-left: -250px;
 }
 
-#searchBar{
-    /* padding-left: 50px; */
-    /* padding-right: 50px; */
-}
-.randomContainer {
-    transform: translateY(-3550%);
-    display: inline-block;
-    margin-left: -2050px;
-    /* padding: 20px 100px 20px 100px; */
-    /* background-color: bisque; */
-}
-
-#randomBttn {
-    margin-left: 100px;
+button:hover {
+    border: var(--lighter-purple);
 }
