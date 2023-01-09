@@ -3,28 +3,16 @@
 </head>
 
 <body>
+    {{>navbar}}
     <div>
-        <button id="Back">Back</button>
+        <button id="Back">{{>backbutt}}</button>
     </div>
-    <div>
-        <button id="Profile">Profile</button>
-    </div>
-    <section class="scroll-snap-panel" role="tablist" aria-label="users and groups">
-        <div class="tabs-container container">
-            <div data-target="people-tab" role="tab" aria-selected="true" class="people tab active"
-                aria-controls="people-tab">Other Users That Liked This Show</div>
-        </div>
-        <div class="scroll-container container">
-            <div class="scroll-list people" role="tabpanel" tabindex="0" id="people-tab" aria-label="people">
-                <ul>
-                    <li>
-                        <img src="/Public/images/google.jpg" class="scroll-list-image" alt="" />
-                        <div>
-                            <h2>Example User</h2>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<figure class="snip1336">
+  <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cherry-blossom-facts-1578344148.jpg?crop=1.00xw:0.756xh;0,0.164xh&amp;resize=980:*"  alt="Cherry blossoms"/>
+  <figcaption>
+    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="800+ Free User &amp; Avatar Images - Pixabay"/>
+    <h2>Example User</h2>
+    <p>I'm looking for something that can deliver a 50-pound payload of snow on a small feminine target. Can you suggest something? Hello...? </p>
+  </figcaption>
+</figure>
 </body>

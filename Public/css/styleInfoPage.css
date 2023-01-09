@@ -1,0 +1,35 @@
+:root {
+    --biloba-flower: #aeb5ec;
+    --east-bay: #3a4c73;
+    --lighter-purple: #f2e7fe;
+}
+
+::selection {
+    background-color: var(--biloba-flower);
+    color: var(--east-bay);
+}
+
+html {
+    font-size: 150%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--east-bay);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--biloba-flower);
+}
