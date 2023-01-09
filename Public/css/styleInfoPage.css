@@ -9,6 +9,12 @@
     color: var(--east-bay);
 }
 
+.container {
+    background-color: var(--biloba-flower);
+    height: 100%;
+}
+
+=======
 html {
     font-size: 150%;
 }
@@ -33,3 +39,4 @@ h1 {
     justify-content: center; 
     background-color: var(--biloba-flower);
 }
+

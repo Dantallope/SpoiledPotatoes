@@ -3,14 +3,20 @@
  </head>
  <body>
     <main class="container">
+
+        <header id="navbar">{{>navbar}}</header>
+        <br>
+        <h1 class="title">{{Title}}</h1>
         <h1>Title</h1>
         <h2>Ranking <span id="ranking"></span></h2>
             <ul>
-                <li>Episodes:<span id="episodeCount"></span> </li>
-                <li>Seasons:<span id="seasonCount"></span></li>
-                <li id="genre"></li> 
-                <li id="year" id="season"></li> 
-                <li id="mangaTitle"></li>
+            <ul class="info">
+                <li>Genre: {{Genre}}</li>
+                <li>Episode Count: {{Epi}}</li>
+                <li>Season Count: {{Seas}}</li>
+                <li>Rating: {{Rate}}</li>
+                <li>When did this Air? {{Air}}</li>
+                <li>Still Airing? {{Satus}}</li>
             </ul>
     </main>
  </body>
