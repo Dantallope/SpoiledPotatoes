@@ -8,3 +8,9 @@
     background-color: var(--biloba-flower);
     color: var(--east-bay);
 }
+
+.container {
+    background-color: var(--biloba-flower);
+    height: 100%;
+}
+
