@@ -10,11 +10,10 @@
 }
 
 ul#main-menu {
-	font-family: sans-serif;
-	font-family: 13px;
-	font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: 300p;
 	list-style: none;
-	position: absolute;
 	cursor: pointer;
 }
 
@@ -24,10 +23,11 @@ ul#main-menu > ul {
 }
 
 ul#main-menu li {
-	background: #006bb6;
-	color: black;
+	background: var(--east-bay);
+	color: var(--lighter-purple);
 	padding: 15px 50px 15px 10px;
 	border-bottom: 1px solid #fff;
+	border-radius: 25px;
 }
 
 ul#main-menu li:hover {
@@ -36,6 +36,7 @@ ul#main-menu li:hover {
 
 ul#main-menu li:first-child {
 	border-radius: 0 5px 0 0;
+	border-radius: 25px;
 }
 
 ul#main-menu i {
@@ -45,7 +46,7 @@ ul#main-menu i {
 
 a:link, a:visited {
 	/* background-color: #006bb6; */
-	color: black;
+	color: var(--lighter-purple);
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -53,5 +54,5 @@ a:link, a:visited {
   
 a:hover, a:active {
 	/* background-color: #006bb6; */
-	color: black;
+	color: var(--east-bay)
   }
