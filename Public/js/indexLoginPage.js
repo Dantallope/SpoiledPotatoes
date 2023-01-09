@@ -81,6 +81,7 @@ signUpForm.addEventListener("submit", (event) => {
                 document.getElementById("signUpErr").textContent = "Unable to create user";
                 return null;
             } else {
+                window.location.replace('/login')
                 return result.json();
             }
         })
