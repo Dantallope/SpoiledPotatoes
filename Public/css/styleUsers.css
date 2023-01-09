@@ -20,20 +20,38 @@
   cursor: pointer;
 }
 
-  .container {
+#Profile {
+  float: right;
+  color: var(--lighter-purple);
+  font-size: 25px;
+  border-radius: 6px;
+  background-color: var(--east-bay);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#Profile:hover {
+  background-color: var(--biloba-flower);
+}
+
+#Back:hover {
+  background-color: var(--biloba-flower);
+}
+
+.container {
     display: grid;
     background-color: var(--biloba-flower);
 }
   
-  .scroll-snap-panel {
+.scroll-snap-panel {
     width: 100%;
     margin: 0 auto;
     max-width: var(--container-width);
-  }
+}
   
   /* the scroll magic */
   
-  .scroll-container {
+.scroll-container {
     position: relative;
     width: 650px;
     height: auto;
@@ -49,9 +67,9 @@
     margin-left: auto;
     margin-right: auto;
     background-color: var(--biloba-flower);
-  }
+}
   
-  .scroll-list {
+.scroll-list {
     display: block;
     width: 55%;
     height: fit-content;
@@ -64,15 +82,15 @@
     list-style: none;
     scroll-snap-align: start;
     scroll-snap-type: y proximity;
-  }
+}
   
-  .scroll-list > ul {
+.scroll-list > ul {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
+}
   
-  .scroll-list li {
+.scroll-list li {
     display: grid;
     grid-template-columns: 80px 1fr;
     gap: 20px;
@@ -82,37 +100,37 @@
     scroll-snap-align: start;
     color: rgb(47, 0, 255);
     background-color: var(--lighter-purple)
-  }
+}
   
   /* styling of the inside of the list */
   
-  .scroll-list > li:last-child {
+.scroll-list > li:last-child {
     border: 0;
-  }
+}
   
-  .scroll-list-image {
+.scroll-list-image {
     border-radius: 50%;
-  }
+}
   
-  .people {
+.people {
     background: var(--people-bg);
     color: var(--people-color);
-  }
+}
   
- /* .groups {
+/* .groups {
     background: var(--groups-bg);
     color: var(--groups-color);
-  }*/
+}*/
   
-  /* some styling of the tabs */
+/* some styling of the tabs */
   
-  .tabs-container {
+.tabs-container {
     margin-top: 20px;
     margin: auto;
     padding-top: 150px;
-  }
+}
   
-  .tab {
+.tab {
     display: block;
     margin: 0;
     padding: 16px 8px;
@@ -121,28 +139,28 @@
     text-transform: uppercase;
     color: --lighter-purple;
     border: 1px solid rgb(0, 217, 255);
-  }
+}
   
-  .tab:first-child {
+.tab:first-child {
     border-top-left-radius: 5px;
     border: 1px solid rgb(0, 26, 255);
     background-color: var(--east-bay);
-  }
+}
   
-  .tab:last-child {
+.tab:last-child {
     border-top-right-radius: 5px;
-  }
+}
   
-  /*.tab.active {
+/*.tab.active {
     border-bottom-color: transparent;
-  }*/
+}*/
   
-  /* some basic styling (added to the bottom for convenience) */
-  * {
-    box-sizing: border-box;
-  }
+/* some basic styling (added to the bottom for convenience) */
+* {
+  box-sizing: border-box;
+}
   
-  body {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -150,14 +168,14 @@
     line-height: 1.5;
     color: #FEFEFE;
     background: var(--main-bg);
-  }
+}
   
-  img {
+img {
     max-width: 100%;
     margin: 0;
-  }
+}
   
-  h2 {
+h2 {
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.2;
