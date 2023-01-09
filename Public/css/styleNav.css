@@ -47,7 +47,7 @@ ul#main-menu i {
 
 a:link, a:visited {
 	/* background-color: #006bb6; */
-	color: var(--lighter-purple);
+	color: black;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -55,5 +55,5 @@ a:link, a:visited {
   
 a:hover, a:active {
 	/* background-color: #006bb6; */
-	color: var(--east-bay)
+	color: black;
   }
