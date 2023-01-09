@@ -15,6 +15,7 @@ ul#main-menu > ul {
 
 ul#main-menu li {
 	background: #006bb6;
+	color: black;
 	padding: 15px 50px 15px 10px;
 	border-bottom: 1px solid #fff;
 }
@@ -31,3 +32,16 @@ ul#main-menu i {
 	padding-right: 15px;
 	padding-left: 5px;
 }
+
+a:link, a:visited {
+	/* background-color: #006bb6; */
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+  }
+  
+a:hover, a:active {
+	/* background-color: #006bb6; */
+	color: black;
+  }

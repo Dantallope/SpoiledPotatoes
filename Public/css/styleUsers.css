@@ -2,11 +2,6 @@
 float: left;
 }
 
-#Profile {
-float: right;
-}
-
-  
   .container {
     display: grid;
   }
