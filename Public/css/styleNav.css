@@ -10,6 +10,7 @@
 }
 
 ul#main-menu {
+	float: left;
     font-family: 'Poppins', sans-serif;
 	font-size: 20px;
 	font-weight: 300p;
@@ -46,14 +47,12 @@ ul#main-menu i {
 }
 
 a:link, a:visited {
-	/* background-color: #006bb6; */
-	color: black;
+	color:var(--lighter-purple);
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
   }
   
 a:hover, a:active {
-	/* background-color: #006bb6; */
-	color: black;
+	color:var(--lighter-purple);
   }
