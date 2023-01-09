@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styleRanking.css">
+</head>
+<body>
+    {{>navbar}}
+    <br>
+    <section>
+        <header class="test">{{AnimeName}}</header>
+        <img class="img" src="/images/potatoLogo.png" alt="">
+    </section>
+    <section id="sec">
+        <sub>
+            <ul class="info">
+                <li>Genre: {{Genre}}</li>
+                <li>Episode Count: {{Epi}}</li>
+                <li>Season Count: {{Seas}}</li>
+                <li>Rating: {{Rate}}</li>
+                <li>When did this Air? {{Air}}</li>
+                <li>Still Airing? {{Satus}}</li>
+            </ul>
+        </sub>
+    </section>
+</body>
+</html>
