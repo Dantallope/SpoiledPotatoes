@@ -2,19 +2,29 @@
     <link rel="stylesheet" href="/css/styleInfoPage.css">
  </head>
  <body>
-    <main class="container">
+    <main class="container" >
         <header id="navbar">{{>navbar}}</header>
         <br>
-        <h1 class="title">{{Title}}</h1>
-        <h2>Ranking <span id="ranking"></span></h2>
-            <ul>
-            <ul class="info">
-                <li>Genre: {{Genre}}</li>
-                <li>Episode Count: {{Epi}}</li>
-                <li>Season Count: {{Seas}}</li>
-                <li>Rating: {{Rate}}</li>
-                <li>When did this Air? {{Air}}</li>
-                <li>Still Airing? {{Satus}}</li>
-            </ul>
+        <section class="innerContainer">
+            <h1 class="title">Title{{Title}}</h1>
+            <h2 id="ranking">Ranking{{Rate}}</h2>
+                <ul class="info">
+                    <li>Genre: {{Genre}} </li>
+                    <li>Episode Count: {{Epi}} </li>
+                    <li>Season Count: {{Seas}} </li>
+                    <li>Air Date {{Air}} </li>
+                    <li>Status {{Satus}} </li>
+                </ul>
+                <p class="description">Description: </p>
+                <p class="descriptionText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type 
+                    specimen book. It has survived not only five centuries, but also the leap into 
+                    electronic typesetting, remaining essentially unchanged. It was popularised in 
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                     and more recently with desktop publishing software like Aldus PageMaker 
+                     including versions of Lorem Ipsum. 
+                    {{Description}}</p>
+        </section>
     </main>
  </body>
