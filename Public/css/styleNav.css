@@ -6,7 +6,7 @@
 
 ::selection {
     background-color: var(--biloba-flower);
-    color: var(--east-bay);
+    color: var(--lighter-purple);
 }
 
 ul#main-menu {
@@ -15,6 +15,7 @@ ul#main-menu {
 	font-weight: 300p;
 	list-style: none;
 	cursor: pointer;
+	color: var(--lighter-purple);
 }
 
 ul#main-menu > ul {
