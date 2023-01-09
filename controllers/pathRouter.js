@@ -45,6 +45,7 @@ pathRouter.get('/ranking', (req, res) => {
 });
 
 pathRouter.get('/librarypage', (req, res) => {
-    res.render("librarypage");
+    let anime = {name:"test"};
+    res.render("librarypage", {Title:anime.name});
 });
 module.exports = pathRouter;

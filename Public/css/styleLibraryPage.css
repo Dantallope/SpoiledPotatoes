@@ -1,0 +1,72 @@
+:root {
+    --biloba-flower: #aeb5ec;
+    --east-bay: #3a4c73;
+    --lighter-purple: #f2e7fe;
+}
+
+::selection {
+    background-color: var(--biloba-flower);
+    color: var(--east-bay);
+}
+
+.container {
+    background-color: var(--biloba-flower);
+    color: var(--lighter-purple);
+    height: 100vh;
+}
+
+.innerContainer {
+    background-color: var(--east-bay);
+    font-family: 'Poppins', sans-serif;
+    height: 95%;
+    width: 80%;
+    margin-top: -35px;
+    margin-left: 300px;
+    border-radius: 25px;
+}
+
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 40px;
+    font-size: 40px;
+}
+
+.cards {
+    padding: 150px;
+}
+
+.card {
+    background-color:var(--biloba-flower);
+    width: 50%;
+    height: 150px;
+    margin-bottom: 30px;
+    margin-top: 30px; 
+    color: var(--east-bay);
+}
+
+.showTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding-left: 150px;
+    margin-top: 50px;
+}
+
+
+@media screen and (min-width: 40em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+   }
+    .card {
+        flex: 0 1 calc(50% - 1em) ;
+    }
+}
+ 
+@media screen and (min-width: 60em) {
+    .cards {
+        flex: 0 1 calc(25% - 1em);
+   } 
+}
