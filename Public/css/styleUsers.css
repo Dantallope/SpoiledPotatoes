@@ -1,15 +1,44 @@
+:root {
+  --biloba-flower: #aeb5ec;
+  --east-bay: #3a4c73;
+  --lighter-purple: #f2e7fe;
+}
+
+::selection {
+  background-color: var(--biloba-flower);
+  color: var(--east-bay);
+}
+
+
 #Back {
-float: left;
+  float: left;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 6px;
+  background-color: var(--east-bay);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 #Profile {
 float: right;
+color: #fff;
+font-size: 25px;
+border-radius: 6px;
+background-color: var(--east-bay);
+transition: all 0.3s ease;
+cursor: pointer;
 }
 
-  
-  .container {
+#Back:hover,
+#Profile:hover {
+  background-color: var(--biloba-flower);
+}
+
+.container {
     display: grid;
-  }
+    background-color: var(--biloba-flower);
+}
   
   .scroll-snap-panel {
     width: 100%;
@@ -34,7 +63,7 @@ float: right;
     border: 1px solid rgba(204, 204, 204, 0);
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+    background-color: var(--biloba-flower);
   }
   
   .scroll-list {
@@ -67,7 +96,7 @@ float: right;
     border-bottom: 1px solid #aaa;
     scroll-snap-align: start;
     color: rgb(47, 0, 255);
-    background-color: rebeccapurple
+    background-color: var(--lighter-purple)
   }
   
   /* styling of the inside of the list */
@@ -105,14 +134,14 @@ float: right;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgb(250, 9, 9);
+    color: --lighter-purple
     border: 1px solid rgb(0, 217, 255);
   }
   
   .tab:first-child {
     border-top-left-radius: 5px;
     border: 1px solid rgb(0, 26, 255);
-    background-color: black;
+    background-color: var(--east-bay);
   }
   
   .tab:last-child {
@@ -131,7 +160,7 @@ float: right;
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     line-height: 1.5;
     color: #FEFEFE;
@@ -145,7 +174,6 @@ float: right;
   
   h2 {
     margin: 0;
-    font-family: 'Merriweather', serif;
     font-size: 1.5rem;
     line-height: 1.2;
   }
