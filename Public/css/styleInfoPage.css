@@ -1,0 +1,10 @@
+:root {
+    --biloba-flower: #aeb5ec;
+    --east-bay: #3a4c73;
+    --lighter-purple: #f2e7fe;
+}
+
+::selection {
+    background-color: var(--biloba-flower);
+    color: var(--east-bay);
+}
