@@ -11,32 +11,55 @@
 
 .container {
     background-color: var(--biloba-flower);
-    height: 100%;
-}
-
-=======
-html {
-    font-size: 150%;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--east-bay);
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-h1 {
+    color: var(--lighter-purple);
     height: 100vh;
+}
+
+.innerContainer {
+    background-color: var(--east-bay);
+    font-family: 'Poppins', sans-serif;
+    height: 95%;
+    width: 80%;
+    margin-top: -65px;
+    margin-left: 300px;
+    border-radius: 25px;
+}
+
+.title {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center; 
-    background-color: var(--biloba-flower);
+    padding: 20px;
+    margin-left: 40px;
+    font-size: 80px;
 }
 
+h2 {
+    margin-top: -80px;
+    margin-left: 70px;
+    font-size: 50px;
+}
+
+.info li{
+    font-size: 27px;
+    display: inline;
+    list-style: none;
+    margin-left: 30px;
+    padding: 10px;
+    color: var(--east-bay);
+    background-color: var(--lighter-purple);
+    border-radius: 25px;
+}
+
+
+.description {
+    margin-left: 70px;
+    font-size: 25px;
+}
+
+.descriptionText {
+    margin-left: 70px;
+    margin-right: 40px;
+    font-size: 25px;
+    flex-wrap: wrap;
+    text-align: justify;
+}

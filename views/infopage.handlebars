@@ -2,21 +2,21 @@
     <link rel="stylesheet" href="/css/styleInfoPage.css">
  </head>
  <body>
-    <main class="container">
-
+    <main class="container" >
         <header id="navbar">{{>navbar}}</header>
         <br>
-        <h1 class="title">{{Title}}</h1>
-        <h1>Title</h1>
-        <h2>Ranking <span id="ranking"></span></h2>
-            <ul>
-            <ul class="info">
-                <li>Genre: {{Genre}}</li>
-                <li>Episode Count: {{Epi}}</li>
-                <li>Season Count: {{Seas}}</li>
-                <li>Rating: {{Rate}}</li>
-                <li>When did this Air? {{Air}}</li>
-                <li>Still Airing? {{Satus}}</li>
-            </ul>
+        <section class="innerContainer">
+            <h1 class="title">Title{{Title}}</h1>
+            <h2 id="ranking">Ranking{{Rate}}</h2>
+                <ul class="info">
+                    <li>Genre: {{Genre}} </li>
+                    <li>Episode Count: {{Epi}} </li>
+                    <li>Season Count: {{Seas}} </li>
+                    <li>Air Date {{Air}} </li>
+                    <li>Status {{Satus}} </li>
+                </ul>
+                <p class="description">Description: </p>
+                <p class="descriptionText">{{Description}}</p>
+        </section>
     </main>
  </body>
