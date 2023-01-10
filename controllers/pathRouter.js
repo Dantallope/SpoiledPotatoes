@@ -43,6 +43,9 @@ pathRouter.get('/infopage', (req, res) => {
 pathRouter.get('/ranking', (req, res) => {
     res.render("ranking");
 });
+pathRouter.get('/content', (req, res) => {
+    res.render("content");
+});
 
 pathRouter.get('/librarypage', (req, res) => {
     let anime = {name:"test"};
