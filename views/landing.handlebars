@@ -1,4 +1,3 @@
-Hi {{user.email}}
  <head>
     <link rel="stylesheet" href="/css/styleLandingPage.css">
     <link rel="stylesheet" href="/css/styleNav.css">
@@ -7,9 +6,11 @@ Hi {{user.email}}
  </head>
  <body>
     <main class="container">
+        <header id="navbar">{{>navbar}}</header>
     <section class="logo">
         <h1 class="webTitle">Spoiled Potatoes</h1>
-        <h2>by CouchPotato Inc. </h2>
+        <h2>by CouchPotato Inc.</h2>
+        <h3> Hi {{user.email}}</h3>
         <img id="potatoLogo" src="/images/potatoLogo.png" 
         alt="Potato Logo">
     </section>
@@ -26,5 +27,5 @@ Hi {{user.email}}
     </div> --}}
 
     </main>
-    <script src="/js/landingPage.js"></script>
+  <script src="/js/landingPage.js"></script>
  </body>

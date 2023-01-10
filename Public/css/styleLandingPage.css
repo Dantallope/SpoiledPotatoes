@@ -52,7 +52,12 @@ h2 {
     border-bottom: 2px solid var(--east-bay);
 }
 
+h3 {
+    margin-left: 40px;
+}
+
 #potatoLogo{
+    display: flex;
     padding: 50px;
     width: 90%;
     height: 40%;
@@ -106,4 +111,29 @@ input:focus {
 
 button:hover {
     border: var(--lighter-purple);
+}
+
+@media screen and (min-width: 40em) {
+    #potatologo {
+        width: 90%;
+        height: 35%;
+    }
+    #navbar {
+        display: inline-block;
+        margin-top: -150px;
+        margin-bottom: -250px;
+    }
+}
+ 
+@media screen and (min-width: 60em) {
+    #potatologo {
+        width: 90%;
+        height: 30%;
+    }
+
+    #navbar {
+        display: inline-block;
+        margin-top: -150px;
+        margin-bottom: -250px;
+    }
 }

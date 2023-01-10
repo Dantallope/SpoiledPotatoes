@@ -44,6 +44,9 @@ pathRouter.get('/info', (req, res) => {
 pathRouter.get('/ranking', (req, res) => {
     res.render("ranking");
 });
+pathRouter.get('/content', (req, res) => {
+    res.render("content");
+});
 
 pathRouter.get('/library', (req, res) => {
     res.render("librarypage",);
