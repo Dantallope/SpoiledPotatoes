@@ -1,5 +1,6 @@
 const {Router} = require("express");
 const jwt = require('jsonwebtoken');
+const shows = require('../db/data')
 
 const User = require('../models/user')
 
@@ -36,7 +37,7 @@ pathRouter.get('/users', (req, res) => {
     res.render("users");
 });
 
-pathRouter.get('/infopage', (req, res) => {
+pathRouter.get('/info', (req, res) => {
     res.render("infopage");
 });
 
@@ -47,8 +48,7 @@ pathRouter.get('/content', (req, res) => {
     res.render("content");
 });
 
-pathRouter.get('/librarypage', (req, res) => {
-    let anime = {name:"test"};
-    res.render("librarypage", {Title:anime.name});
+pathRouter.get('/library', (req, res) => {
+    res.render("librarypage",);
 });
 module.exports = pathRouter;
