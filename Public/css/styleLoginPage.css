@@ -17,6 +17,9 @@
     font-family: 'Poppins', sans-serif;
     color: var(--east-bay);
 }
+element.style {
+    width: auto;
+}
 
 .container {
     height: 100vh;
