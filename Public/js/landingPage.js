@@ -1,8 +1,7 @@
-const loginBttn = document.getElementById('loginBttn')
+const loginBttn = document.getElementById('logiin')
 
-loginBttn.onclick = function(event) {
+loginBttn.addEventListener('click', (event) =>{ 
     event.preventDefault();
-    
-    window.location = 'http://localhost:3001/login'
-}
+    window.location='http://localhost:3001/login';
+})
 

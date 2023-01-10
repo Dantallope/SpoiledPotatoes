@@ -1,24 +1,23 @@
-Hi {{user.email}}
  <head>
     <link rel="stylesheet" href="/css/styleLandingPage.css">
     <link rel="stylesheet" href="/css/styleNav.css">
-
-<nav id="navbar" role="navigation">
+ </head>
+ <body>
+    <nav id="navbar" role="navigation">
     <ul id="main-menu">
         <li><i id="backhome" class="navbutt"></i>Home</li>
         <li><i id="mangalib" class="navbutt"></i>Manga</li>
         <li><i id="animelib" class="navbutt"></i>Anime</li>
         <li><i id="mostRated" class="navbutt"></i>Most Rated</li>
-        <li><i id="login" class="navbutt"></i>Login/Sign Up</li>
+        <li id="logiin">Login/Sign Up</li>
         <li><i id="seasontop" class="navbutt"></i> Top of This Season</li>
     </ul>
 </nav>
- </head>
- <body>
     <main class="container">
     <section class="logo">
         <h1 class="webTitle">Spoiled Potatoes</h1>
-        <h2>by CouchPotato Inc. </h2>
+        <h2>by CouchPotato Inc.</h2>
+        <h3> Hi {{user.email}}</h3>
         <img id="potatoLogo" src="/images/potatoLogo.png" 
         alt="Potato Logo">
     </section>
@@ -35,5 +34,5 @@ Hi {{user.email}}
     </div> --}}
 
     </main>
-    <script src="/js/landingPage.js"></script>
+  <script src="/js/landingPage.js"></script>
  </body>
