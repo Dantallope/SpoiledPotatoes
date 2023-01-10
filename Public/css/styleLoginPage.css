@@ -17,13 +17,11 @@
     font-family: 'Poppins', sans-serif;
     color: var(--east-bay);
 }
-element.style {
-    width: auto;
-}
+
 
 .container {
     height: 100vh;
-    width: 100vh;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
