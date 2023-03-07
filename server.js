@@ -4,6 +4,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 
+
 const sequelize = require('./config/connection')
 const mainRouter = require("./controllers")
 
