@@ -5,9 +5,9 @@ const PORT = process.env.PORT || 3001;
 
 
 const sequelize = new Sequelize(
-  'heroku_995c8fbe9ba5009',
-  'b5a7610b3de5a9',
-  '9cf2ffdc',
+  process.env.HOST'heroku_995c8fbe9ba5009',
+  process.env.PASS'b5a7610b3de5a9',
+  process.env.DB'9cf2ffdc',
   {
     host: 'us-cdbr-iron-east-02.cleardb.net',
     dialect: 'mysql',
