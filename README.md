@@ -17,4 +17,4 @@ I can add it into a list of shows I want to watch in the future.<br />
 Repo:<br />
 https://github.com/Dantallope/SpoiledPotatoes <br />
 Heroku deployment:<br />
-https://git.heroku.com/wootw.git
+https://wootw.herokuapp.com
