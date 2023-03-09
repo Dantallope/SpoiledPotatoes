@@ -18,7 +18,7 @@ app.set('view engine', 'handlebars');
 
 app.get('/css/styleLoginPage.css', (req, res) => {
   res.type('text/css');
-  res.sendFile(path.join(__dirname, 'public', 'css', 'styleLoginPage.css'));
+  res.sendFile(path.join(__dirname, 'public1', 'css', 'styleLoginPage.css'));
 });
 
 app.use(express.json());
