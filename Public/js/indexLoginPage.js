@@ -1,5 +1,3 @@
-
-
 const forms = document.querySelector(".forms"),
     showPassword = document.querySelectorAll(".eye-icon"),
     links = document.querySelectorAll(".link");
